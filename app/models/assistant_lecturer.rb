@@ -1,0 +1,2 @@
+class AssistantLecturer < ApplicationRecord
+end
