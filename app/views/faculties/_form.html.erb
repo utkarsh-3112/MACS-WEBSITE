@@ -1,0 +1,62 @@
+<%= form_with(model: faculty) do |form| %>
+  <% if faculty.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(faculty.errors.count, "error") %> prohibited this faculty from being saved:</h2>
+
+      <ul>
+        <% faculty.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :dp, style: "display: block" %>
+    <%= form.text_field :dp %>
+  </div>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :designation, style: "display: block" %>
+    <%= form.text_field :designation %>
+  </div>
+
+  <div>
+    <%= form.label :date_of_joining, style: "display: block" %>
+    <%= form.date_field :date_of_joining %>
+  </div>
+
+  <div>
+    <%= form.label :professional_experience, style: "display: block" %>
+    <%= form.text_area :professional_experience %>
+  </div>
+
+  <div>
+    <%= form.label :academic_background, style: "display: block" %>
+    <%= form.text_area :academic_background %>
+  </div>
+
+  <div>
+    <%= form.label :areas_of_interest, style: "display: block" %>
+    <%= form.text_area :areas_of_interest %>
+  </div>
+
+  <div>
+    <%= form.label :visits_abroad, style: "display: block" %>
+    <%= form.text_area :visits_abroad %>
+  </div>
+
+  <div>
+    <%= form.label :remarks, style: "display: block" %>
+    <%= form.text_area :remarks %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

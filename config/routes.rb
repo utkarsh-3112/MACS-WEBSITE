@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :publications
+  resources :research_consultancies
+  resources :research_scholars
+  resources :faculties
   resources :staffs
   resources :contract_staffs
   resources :assistant_lecturers

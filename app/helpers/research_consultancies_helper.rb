@@ -1,0 +1,2 @@
+module ResearchConsultanciesHelper
+end

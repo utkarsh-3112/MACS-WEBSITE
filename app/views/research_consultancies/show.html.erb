@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @research_consultancy %>
+
+<div>
+  <%= link_to "Edit this research consultancy", edit_research_consultancy_path(@research_consultancy) %> |
+  <%= link_to "Back to research consultancies", research_consultancies_path %>
+
+  <%= button_to "Destroy this research consultancy", @research_consultancy, method: :delete %>
+</div>

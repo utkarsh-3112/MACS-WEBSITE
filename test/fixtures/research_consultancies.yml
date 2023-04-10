@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_name: MyText
+  faculty: one
+  sanctioned_amount: MyString
+  status: 
+  project_type: MyString
+
+two:
+  project_name: MyText
+  faculty: two
+  sanctioned_amount: MyString
+  status: 
+  project_type: MyString

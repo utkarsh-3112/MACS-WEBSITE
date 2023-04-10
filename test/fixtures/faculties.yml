@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dp: MyString
+  name: MyString
+  designation: MyString
+  date_of_joining: 2023-04-10
+  professional_experience: MyText
+  academic_background: MyText
+  areas_of_interest: MyText
+  visits_abroad: MyText
+  remarks: MyText
+
+two:
+  dp: MyString
+  name: MyString
+  designation: MyString
+  date_of_joining: 2023-04-10
+  professional_experience: MyText
+  academic_background: MyText
+  areas_of_interest: MyText
+  visits_abroad: MyText
+  remarks: MyText

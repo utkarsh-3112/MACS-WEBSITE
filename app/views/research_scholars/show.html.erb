@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @research_scholar %>
+
+<div>
+  <%= link_to "Edit this research scholar", edit_research_scholar_path(@research_scholar) %> |
+  <%= link_to "Back to research scholars", research_scholars_path %>
+
+  <%= button_to "Destroy this research scholar", @research_scholar, method: :delete %>
+</div>

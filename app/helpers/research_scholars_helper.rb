@@ -1,0 +1,2 @@
+module ResearchScholarsHelper
+end

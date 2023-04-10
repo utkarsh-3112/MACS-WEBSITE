@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  publish_in: MyString
+  reigon: 
+  url: MyString
+  year: 2023-04-10
+
+two:
+  name: MyText
+  publish_in: MyString
+  reigon: 
+  url: MyString
+  year: 2023-04-10
