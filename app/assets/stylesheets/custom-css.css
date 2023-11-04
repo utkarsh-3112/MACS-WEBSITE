@@ -1,0 +1,53 @@
+.place-stat{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+}
+
+.place-stat h2{
+    color: #3db166;
+    font-family: sans-serif;
+}
+
+.sem1{
+    display: block;
+}
+.sem2{
+    display: block;
+}
+.sem3{
+    display: block;
+}
+.sem4{
+    display: block;
+}
+.sem5{
+    display: block;
+}
+.sem6{
+    display: block;
+}
+
+@media only screen and (max-width: 767px){
+    .place-stat{
+        width: 80vw;
+        margin: auto;
+    }
+
+    .place-stat h2{
+        font-size: 30px;
+    }
+}
+
+
+/* js to disable resize for subject and message boxes in contact.html */
+
+
+#message, #subject {
+
+    resize: none;
+}
