@@ -14,8 +14,7 @@
     <link rel='stylesheet' href='../../assets/stylesheets/style-core.css' type='text/css' media='all' />
     <link rel='stylesheet' href='../../assets/stylesheets/kingster-style-custom.css' type='text/css' media='all' />
 
-    <!-- link to custom css file -->
-    <link rel='stylesheet' href='../../assets/stylesheets/custom-css.css' type='text/css' media='all' />
+    <%= stylesheet_link_tag "custom-css.css" %>
 
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700%2C400" rel="stylesheet" property="stylesheet" type="text/css" media="all">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CABeeZee%3Aregular%2Citalic&amp;subset=latin%2Clatin-ext%2Cdevanagari&amp;ver=5.0.3' type='text/css' media='all' />
@@ -548,17 +547,18 @@
     </div>
 
 
-	<script type='text/javascript' src='../../assets/javascript/js/jquery/jquery.js'></script>
-    <script type='text/javascript' src='../../assets/javascript/js/jquery/jquery-migrate.min.js'></script>
-    <script type='text/javascript' src='../../assets/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js'></script>
-    <script type='text/javascript' src='../../assets/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js'></script>
-    <script type="text/javascript" src="../../assets/plugins/revslider/public/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
-    <script type="text/javascript" src="../../assets/plugins/revslider/public/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script type="text/javascript" src="../../assets/plugins/revslider/public/assets/js/extensions/revolution.extension.kenburn.min.js"></script>
-    <script type="text/javascript" src="../../assets/plugins/revslider/public/assets/js/extensions/revolution.extension.navigation.min.js"></script>
-    <script type="text/javascript" src="../../assets/plugins/revslider/public/assets/js/extensions/revolution.extension.parallax.min.js"></script>  
-    <script type="text/javascript" src="../../assets/plugins/revslider/public/assets/js/extensions/revolution.extension.actions.min.js"></script> 
-    <script type="text/javascript" src="../../assets/plugins/revslider/public/assets/js/extensions/revolution.extension.video.min.js"></script>
+    <%= javascript_include_tag "js/jquery/jquery-migrate.min.js",
+    "js/jquery/jquery.js",
+    "plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js",
+    "plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js",
+    "plugins/revslider/public/assets/js/extensions/revolution.extension.slideanims.min.js",
+    "plugins/revslider/public/assets/js/extensions/revolution.extension.layeranimation.min.js",
+    "plugins/revslider/public/assets/js/extensions/revolution.extension.kenburn.min.js",
+    "plugins/revslider/public/assets/js/extensions/revolution.extension.navigation.min.js",
+    "plugins/revslider/public/assets/js/extensions/revolution.extension.parallax.min.js",
+    "plugins/revslider/public/assets/js/extensions/revolution.extension.actions.min.js",
+    "plugins/revslider/public/assets/js/extensions/revolution.extension.video.min.js"
+    %>
 
     <script type="text/javascript">
         /*<![CDATA[*/
@@ -662,7 +662,9 @@
         } /*]]>*/
     </script>
 
-    <script type='text/javascript' src='plugins/goodlayers-core/plugins/combine/script.js'></script>
+    # <script type='text/javascript' src='plugins/goodlayers-core/plugins/combine/script.js'></script>
+    <%= javascript_include_tag "plugins/goodlayers-core/plugins/combine/script.js" %>
+    
     <script type='text/javascript'>
         var gdlr_core_pbf = {
             "admin": "",
@@ -673,17 +675,19 @@
             "ajax_url": "https:\/\/demo.goodlayers.com\/kingster\/wp-admin\/admin-ajax.php"
         };
     </script>
-    <script type='text/javascript' src='plugins/goodlayers-core/include/js/page-builder.js'></script>
+    # <script type='text/javascript' src='plugins/goodlayers-core/include/js/page-builder.js'></script>
+    <%= javascript_include_tag "plugins/goodlayers-core/include/js/page-builder.js" %>
 
 
-
-    <script type='text/javascript' src='js/jquery/ui/effect.min.js'></script>
+    # <script type='text/javascript' src='js/jquery/ui/effect.min.js'></script>
+    <%= javascript_include_tag "js/jquery/ui/effect.min.js" %>
     <script type='text/javascript'>
         var kingster_script_core = {
             "home_url": "https:\/\/demo.goodlayers.com\/kingster\/"
         };
     </script>
-    <script type='text/javascript' src='js/plugins.min.js'></script>
+    # <script type='text/javascript' src='js/plugins.min.js'></script>
+    <%= javascript_include_tag "js/plugins.min.js" %>
 	<script>
 	    /*<![CDATA[*/
 	    var htmlDiv = document.getElementById("rs-plugin-settings-inline-css");

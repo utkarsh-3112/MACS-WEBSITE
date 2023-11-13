@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'facilities/index'
+  get 'mca_courses/index'
+  get 'mtech_courses/index'
+  get 'btech_courses/index'
+  get 'btech_programmes/index'
   get 'mca_programme/index'
   get 'mtech_programme/index'
   get 'home/index'
