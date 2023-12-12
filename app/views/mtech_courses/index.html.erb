@@ -49,6 +49,13 @@
                                             </div>
                                             <div class="gdlr-core-pbf-element">
                                                 <div class="gdlr-core-course-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-course-style-list" style="padding-bottom: 45px ;">
+                                                <div id="courses">
+                                                    <% @courses.each do |course| %>
+                                                        <% if course.programme == "MTECH" %>
+                                                            <div class="gdlr-core-course-item-list sem<%= course.semester %>" ><a class="gdlr-core-course-item-link" href="#"><span class="gdlr-core-course-item-id gdlr-core-skin-caption" ><%= course.course_code %></span><span class="gdlr-core-course-item-title gdlr-core-skin-title" ><%= course.course_name %></span><i class="gdlr-core-course-item-icon gdlr-core-skin-icon" >Credits : <%= course.credits %></i></a></div>
+                                                        <% end %>
+                                                    <% end %>
+                                                </div>
                                                     <div class="gdlr-core-course-item-list sem1" ><a class="gdlr-core-course-item-link" href="#"><span class="gdlr-core-course-item-id gdlr-core-skin-caption" >MA721</span><span class="gdlr-core-course-item-title gdlr-core-skin-title" >Introduction to scalable Systems</span><i class="gdlr-core-course-item-icon gdlr-core-skin-icon" >Credits : 4</i></a></div>
                                                     <div class="gdlr-core-course-item-list sem1"><a class="gdlr-core-course-item-link" href="#"><span class="gdlr-core-course-item-id gdlr-core-skin-caption" >MA722</span><span class="gdlr-core-course-item-title gdlr-core-skin-title" >Foundation of Machine Learning Algorithms</span><i class="gdlr-core-course-item-icon gdlr-core-skin-icon" >Credits : 4</i></a></div>
                                                     <div class="gdlr-core-course-item-list sem2" ><a class="gdlr-core-course-item-link" href="#"><span class="gdlr-core-course-item-id gdlr-core-skin-caption" >MA725</span><span class="gdlr-core-course-item-title gdlr-core-skin-title" >Scientific Computing Methods for Data Science</span><i class="gdlr-core-course-item-icon gdlr-core-skin-icon" >Credits : 4</i></a></div>

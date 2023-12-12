@@ -58,6 +58,13 @@
                                             </div>
                                             <div class="gdlr-core-pbf-element">
                                                 <div class="gdlr-core-course-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-course-style-list" style="padding-bottom: 45px ;">
+                                                    <div id="courses">
+                                                        <% @courses.each do |course| %>
+                                                            <% if course.programme == "MCA" %>
+                                                                <div class="gdlr-core-course-item-list sem<%= course.semester %>" ><a class="gdlr-core-course-item-link" href="#"><span class="gdlr-core-course-item-id gdlr-core-skin-caption" ><%= course.course_code %></span><span class="gdlr-core-course-item-title gdlr-core-skin-title" ><%= course.course_name %></span><i class="gdlr-core-course-item-icon gdlr-core-skin-icon" >Credits : <%= course.credits %></i></a></div>
+                                                            <% end %>
+                                                        <% end %>
+                                                    </div>
                                                     <div class="gdlr-core-course-item-list sem1" ><a class="gdlr-core-course-item-link" href="#"><span class="gdlr-core-course-item-id gdlr-core-skin-caption" >MA601</span><span class="gdlr-core-course-item-title gdlr-core-skin-title" >Problem Solving and Programming</span><i class="gdlr-core-course-item-icon gdlr-core-skin-icon" >Credits : 3</i></a></div>
                                                     <div class="gdlr-core-course-item-list sem1"><a class="gdlr-core-course-item-link" href="#"><span class="gdlr-core-course-item-id gdlr-core-skin-caption" >MA602</span><span class="gdlr-core-course-item-title gdlr-core-skin-title" >Discrete Mathematical Structures</span><i class="gdlr-core-course-item-icon gdlr-core-skin-icon" >Credits : 3</i></a></div>
                                                     <div class="gdlr-core-course-item-list sem1" ><a class="gdlr-core-course-item-link" href="#"><span class="gdlr-core-course-item-id gdlr-core-skin-caption" >MA603</span><span class="gdlr-core-course-item-title gdlr-core-skin-title" >Computer Organization Architecture</span><i class="gdlr-core-course-item-icon gdlr-core-skin-icon" >Credits : 3</i></a></div>
