@@ -5,6 +5,9 @@ class FacultiesController < ApplicationController
   def index
     @faculties = Faculty.all
     @assistant_lecturers = AssistantLecturer.all
+    @research_scholars = ResearchScholar.all
+    @staffs = Staff.all
+    @contract_staffs = ContractStaff.all
   end
 
   # GET /faculties/1 or /faculties/1.json
