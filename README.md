@@ -1,24 +1,21 @@
-# README
+# Project Title
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+MACS Website is a project that comes under the department of Mathematical and Computational Sciences. The project is headed under Sir. S S Kamath.
 
-Things you may want to cover:
 
-* Ruby version
+## Tech Stack
 
-* System dependencies
+**Client:** HTML, CSS, JS
 
-* Configuration
+**Server:** Ruby, Ruby on Rails
 
-* Database creation
 
-* Database initialization
+## Core Developers
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Swati Agarwal (Team Leader)
+- Hemant Gupta
+- Ayush Ranjan Jha
+- Utkarsh Agarwal
+- Rohit Kumar
+- Aman Sehgal
+- Tejaswini Saxena
