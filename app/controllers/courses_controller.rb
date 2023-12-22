@@ -25,8 +25,17 @@ class CoursesController < ApplicationController
 
     respond_to do |format|
       if @course.save
-        format.html { redirect_to course_url(@course), notice: "Course was successfully created." }
-        format.json { render :show, status: :created, location: @course }
+        if @course.programme == "MCA"
+          format.html { redirect_to "/mca_courses/index", notice: "Course was successfully created." }
+          format.json { render :show, status: :created, location: @course }
+        elsif @course.programme == "MTECH"
+          format.html { redirect_to "/mtech_courses/index", notice: "Course was successfully created." }
+          format.json { render :show, status: :created, location: @course }
+        else
+          format.html { redirect_to "/btech_courses/index", notice: "Course was successfully created." }
+          format.json { render :show, status: :created, location: @course }
+        end
+
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @course.errors, status: :unprocessable_entity }
@@ -38,8 +47,17 @@ class CoursesController < ApplicationController
   def update
     respond_to do |format|
       if @course.update(course_params)
-        format.html { redirect_to course_url(@course), notice: "Course was successfully updated." }
-        format.json { render :show, status: :ok, location: @course }
+        if @course.programme == "MCA"
+          format.html { redirect_to "/mca_courses/index", notice: "Course was successfully updated." }
+          format.json { render :show, status: :created, location: @course }
+        elsif @course.programme == "MTECH"
+          format.html { redirect_to "/mtech_courses/index", notice: "Course was successfully updated." }
+          format.json { render :show, status: :created, location: @course }
+        else
+          format.html { redirect_to "/btech_courses/index", notice: "Course was successfully updated." }
+          format.json { render :show, status: :created, location: @course }
+        end
+
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @course.errors, status: :unprocessable_entity }
