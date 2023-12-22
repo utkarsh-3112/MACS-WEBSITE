@@ -52,7 +52,9 @@
                                                 </div>
                                             </div>
                                             <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"><a class="gdlr-core-button  gdlr-core-button-solid gdlr-core-button-no-border" href="#" style="font-size: 13px ;padding: 11px 24px 15px 27px;border-radius: 2px;-moz-border-radius: 2px;-webkit-border-radius: 2px;"><span class="gdlr-core-content" >Download CV</span><i class="gdlr-core-pos-right fa fa-file-pdf-o"  ></i></a></div>
+                                                <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"><a class="gdlr-core-button  gdlr-core-button-solid gdlr-core-button-no-border" href="#" style="font-size: 13px ;padding: 11px 24px 15px 27px;border-radius: 2px;-moz-border-radius: 2px;-webkit-border-radius: 2px;"><span class="gdlr-core-content" >Download CV</span></a></div>
+                                                <!-- TODO: Update changes later -->
+                                                <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"><%= link_to "Edit", edit_faculty_path(@faculty), class: 'gdlr-core-button  gdlr-core-button-solid gdlr-core-button-no-border', style: "font-size: 13px ;padding: 11px 24px 15px 27px;border-radius: 2px;-moz-border-radius: 2px;-webkit-border-radius: 2px;" %></div>
                                             </div>
                                         </div>
                                     </div>
@@ -93,7 +95,7 @@
                                             <div class="gdlr-core-pbf-element">
                                                 <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 20px ;">
                                                     <div class="gdlr-core-text-box-item-content" style="font-size: 17px ;letter-spacing: 0px ;text-transform: none ;">
-                                                        <p>- Graph Theory</p>
+                                                        <p>- <%= faculty.areas_of_interest %></p>
                                                         <p>- Combinatorics</p>
                                                     </div>
                                                 </div>
@@ -113,7 +115,7 @@
                                                 <div class="gdlr-core-icon-list-item gdlr-core-item-pdlr gdlr-core-item-pdb clearfix ">
                                                     <ul>
                                                         <li class=" gdlr-core-skin-divider" style="margin-bottom: 13px ;"><span class="gdlr-core-icon-list-icon-wrap" style="margin-top: 4px ;"><i class="gdlr-core-icon-list-icon fa fa-dot-circle-o" style="color: #6b6b6b ;font-size: 16px ;width: 16px ;" ></i></span>
-                                                            <div class="gdlr-core-icon-list-content-wrap"><span class="gdlr-core-icon-list-content" style="font-size: 17px ;text-transform: none ;">Ph.D (Karnatak University, Dharwad) & Year of Completion: 1991</span></div>
+                                                            <div class="gdlr-core-icon-list-content-wrap"><span class="gdlr-core-icon-list-content" style="font-size: 17px ;text-transform: none ;"><%= faculty.academic_background %></span></div>
                                                         </li>
                                                         <li class=" gdlr-core-skin-divider" style="margin-bottom: 13px ;"><span class="gdlr-core-icon-list-icon-wrap" style="margin-top: 4px ;"><i class="gdlr-core-icon-list-icon fa fa-dot-circle-o" style="color: #6b6b6b ;font-size: 16px ;width: 16px ;" ></i></span>
                                                             <div class="gdlr-core-icon-list-content-wrap"><span class="gdlr-core-icon-list-content" style="font-size: 17px ;text-transform: none ;">M.Sc. (Karnataka University, Dharwad) & Year of Passing: 1986</span></div>
