@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_10_121113) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_31_181100) do
   create_table "assistant_lecturers", force: :cascade do |t|
     t.string "dp"
     t.string "name"
@@ -68,6 +68,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_10_121113) do
     t.text "remarks"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "email"
+    t.string "phone_number"
   end
 
   create_table "faculty_publications", force: :cascade do |t|

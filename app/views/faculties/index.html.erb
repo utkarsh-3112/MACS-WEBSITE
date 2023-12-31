@@ -75,9 +75,10 @@
                                                                 <div class="kingster-personnel-info-list kingster-type-phone"><i class="kingster-personnel-info-list-icon fa fa-phone"></i><%= "Phone Number" %></div>
                                                             </div>
                                                             <div class="gdlr-core-personnel-list-content">
-                                                                <p>&#8211; PhD, Accounting, Finance minor, Texas A&#038;M University
-                                                                    <br /> &#8211; BA, Business Administration, University of Washington</p>
-                                                            </div><a class="gdlr-core-personnel-list-button gdlr-core-button" href="/faculties/<%= faculty.id %>">More Detail</a></div>
+                                                                <% faculty.academic_background.split(',', -1).each do |item| %>
+                                                                    <p><%= item %></p>
+                                                                <% end %>
+                                                                </div><a class="gdlr-core-personnel-list-button gdlr-core-button" href="/faculties/<%= faculty.id %>">More Detail</a></div>
                                                     </div>
                                                 </div>
                                             <% end %>

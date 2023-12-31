@@ -45,9 +45,13 @@
                                                         <div class="kingster-personnel-info-list kingster-type-social-shortcode">
                                                             <div class="gdlr-core-social-network-item gdlr-core-item-pdb  gdlr-core-none-align" style="padding-bottom: 0px ;"><a href="#" target="_blank" class="gdlr-core-social-network-icon" title="facebook" style="font-size: 18px ;color: #50bd77 ;"><i class="fa fa-facebook" ></i></a><a href="#" target="_blank" class="gdlr-core-social-network-icon" title="linkedin" style="font-size: 18px ;color: #50bd77 ;margin-left: 14px ;"><i class="fa fa-linkedin" ></i></a><a href="#" target="_blank" class="gdlr-core-social-network-icon" title="skype" style="font-size: 18px ;color: #50bd77 ;margin-left: 14px ;"><i class="fa fa-skype" ></i></a><a href="#url" target="_blank" class="gdlr-core-social-network-icon" title="twitter" style="font-size: 18px ;color: #50bd77 ;margin-left: 14px ;"><i class="fa fa-twitter" ></i></a></div>
                                                         </div>
-                                                        <div class="kingster-personnel-info-list kingster-type-email"><i class="kingster-personnel-info-list-icon fa fa-envelope-open"></i>shyam@nitk.edu.in</div>
-                                                        <div class="kingster-personnel-info-list kingster-type-phone"><i class="kingster-personnel-info-list-icon fa fa-phone"></i>+91-8242473254</div>
-                                                        <div class="kingster-personnel-info-list kingster-type-location"><i class="kingster-personnel-info-list-icon fa fa-location-arrow"></i>First Floor, Department of MACS, NITK Surathkal</div>
+                                                        <% faculty.email.split(',', -1).each do |item| %>
+                                                            <div class="kingster-personnel-info-list kingster-type-email"><i class="kingster-personnel-info-list-icon fa fa-envelope-open"></i><%= item %></div>
+                                                        <% end %>
+                                                        <% faculty.phone_number.split(',', -1).each do |item| %>
+                                                            <div class="kingster-personnel-info-list kingster-type-phone"><i class="kingster-personnel-info-list-icon fa fa-phone"></i><%= item %></div>
+                                                        <% end %>
+                                                        <!-- <div class="kingster-personnel-info-list kingster-type-location"><i class="kingster-personnel-info-list-icon fa fa-location-arrow"></i>First Floor, Department of MACS, NITK Surathkal</div> -->
                                                     </div>
                                                 </div>
                                             </div>
@@ -65,7 +69,7 @@
                                             <div class="gdlr-core-pbf-element">
                                                 <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr">
                                                     <div class="gdlr-core-title-item-title-wrap clearfix">
-                                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 34px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #161616 ;"><%= faculty.name %></h3></div><span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 20px ;font-style: normal ;color: #6c6c6c ;">Professor</span></div>
+                                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 34px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #161616 ;"><%= faculty.name %></h3></div><span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 20px ;font-style: normal ;color: #6c6c6c ;"><%= faculty.designation%></span></div>
                                             </div>
                                             <div class="gdlr-core-pbf-element">
                                                 <div class="gdlr-core-divider-item gdlr-core-divider-item-normal gdlr-core-item-pdlr gdlr-core-center-align" style="margin-bottom: 55px ;">
@@ -76,7 +80,7 @@
                                                 <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 6px ;">
                                                     <div class="gdlr-core-text-box-item-content" style="font-size: 21px ;text-transform: none ;color: #3db166 ;">
                                                         <p><b>Professional Experience : </b></p>
-                                                        <p>Total 25 Years and 25 Years at NITK </p>
+                                                        <p><%= faculty.professional_experience %></p>
                                                         <br>
                                                     </div>
                                                 </div>
@@ -95,8 +99,9 @@
                                             <div class="gdlr-core-pbf-element">
                                                 <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 20px ;">
                                                     <div class="gdlr-core-text-box-item-content" style="font-size: 17px ;letter-spacing: 0px ;text-transform: none ;">
-                                                        <p>- <%= faculty.areas_of_interest %></p>
-                                                        <p>- Combinatorics</p>
+                                                        <% faculty.areas_of_interest.split(',', -1).each do |item| %>
+                                                            <p>- <%= item %></p>
+                                                        <% end %>
                                                     </div>
                                                 </div>
                                             </div>
@@ -114,15 +119,11 @@
                                             <div class="gdlr-core-pbf-element">
                                                 <div class="gdlr-core-icon-list-item gdlr-core-item-pdlr gdlr-core-item-pdb clearfix ">
                                                     <ul>
-                                                        <li class=" gdlr-core-skin-divider" style="margin-bottom: 13px ;"><span class="gdlr-core-icon-list-icon-wrap" style="margin-top: 4px ;"><i class="gdlr-core-icon-list-icon fa fa-dot-circle-o" style="color: #6b6b6b ;font-size: 16px ;width: 16px ;" ></i></span>
-                                                            <div class="gdlr-core-icon-list-content-wrap"><span class="gdlr-core-icon-list-content" style="font-size: 17px ;text-transform: none ;"><%= faculty.academic_background %></span></div>
-                                                        </li>
-                                                        <li class=" gdlr-core-skin-divider" style="margin-bottom: 13px ;"><span class="gdlr-core-icon-list-icon-wrap" style="margin-top: 4px ;"><i class="gdlr-core-icon-list-icon fa fa-dot-circle-o" style="color: #6b6b6b ;font-size: 16px ;width: 16px ;" ></i></span>
-                                                            <div class="gdlr-core-icon-list-content-wrap"><span class="gdlr-core-icon-list-content" style="font-size: 17px ;text-transform: none ;">M.Sc. (Karnataka University, Dharwad) & Year of Passing: 1986</span></div>
-                                                        </li>
-                                                        <li class=" gdlr-core-skin-divider" style="margin-bottom: 13px ;"><span class="gdlr-core-icon-list-icon-wrap" style="margin-top: 4px ;"><i class="gdlr-core-icon-list-icon fa fa-dot-circle-o" style="color: #6b6b6b ;font-size: 16px ;width: 16px ;" ></i></span>
-                                                            <div class="gdlr-core-icon-list-content-wrap"><span class="gdlr-core-icon-list-content" style="font-size: 17px ;text-transform: none ;">B.Sc., (Karnatak University, Dharwad) & Year of Passing: 1984</span></div>
-                                                        </li>
+                                                        <% faculty.academic_background.split(',', -1).each do |item| %>
+                                                            <li class=" gdlr-core-skin-divider" style="margin-bottom: 13px ;"><span class="gdlr-core-icon-list-icon-wrap" style="margin-top: 4px ;"><i class="gdlr-core-icon-list-icon fa fa-dot-circle-o" style="color: #6b6b6b ;font-size: 16px ;width: 16px ;" ></i></span>
+                                                                <div class="gdlr-core-icon-list-content-wrap"><span class="gdlr-core-icon-list-content" style="font-size: 17px ;text-transform: none ;"><%= item %></span></div>
+                                                            </li>
+                                                        <% end %>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -140,6 +141,12 @@
                                             <div class="gdlr-core-pbf-element">
                                                 <div class="gdlr-core-icon-list-item gdlr-core-item-pdlr gdlr-core-item-pdb clearfix ">
                                                     <ul>
+                                                        <% @publications.each do |publication| %>
+                                                            <li class=" gdlr-core-skin-divider" style="margin-bottom: 13px ;"><span class="gdlr-core-icon-list-icon-wrap" style="margin-top: 1px ;"><i class="gdlr-core-icon-list-icon fa fa-hand-o-right" style="color: #6b6b6b ;font-size: 22px ;width: 22px ;" ></i></span>
+                                                                <div class="gdlr-core-icon-list-content-wrap"><span class="gdlr-core-icon-list-content" style="font-size: 17px ;text-transform: none ;">Mixed Domination in Graphs, E. Sampathkumar and S. S. Kamath, Sankhya (Special Volume) 54, (1992), 399-402.</span></div>
+                                                            </li>
+                                                        <% end %>
+                                                           
                                                         <li class=" gdlr-core-skin-divider" style="margin-bottom: 13px ;"><span class="gdlr-core-icon-list-icon-wrap" style="margin-top: 1px ;"><i class="gdlr-core-icon-list-icon fa fa-hand-o-right" style="color: #6b6b6b ;font-size: 22px ;width: 22px ;" ></i></span>
                                                             <div class="gdlr-core-icon-list-content-wrap"><span class="gdlr-core-icon-list-content" style="font-size: 17px ;text-transform: none ;">Mixed Domination in Graphs, E. Sampathkumar and S. S. Kamath, Sankhya (Special Volume) 54, (1992), 399-402.</span></div>
                                                         </li>

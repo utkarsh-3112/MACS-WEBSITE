@@ -1,3 +1,5 @@
+require 'json'
+
 class FacultiesController < ApplicationController
   before_action :set_faculty, only: %i[ show edit update destroy ]
 
@@ -12,6 +14,13 @@ class FacultiesController < ApplicationController
 
   # GET /faculties/1 or /faculties/1.json
   def show
+    id = JSON.parse(params[:id])
+    # @faculty_publications = FacultyPublication.find(:all, :conditions => {:faculty_id => params[:id]}) 
+    faculty = Faculty.find(id)
+    @publications = faculty.publications
+    # publications.each do |publication|
+    #   puts "Publication Name: #{publication.name}"
+    # end
   end
 
   # GET /faculties/new
@@ -42,6 +51,9 @@ class FacultiesController < ApplicationController
   def update
     respond_to do |format|
       if @faculty.update(faculty_params)
+        puts "ABCDEFGH"
+        puts @faculty.email
+        puts @faculty.phone_number
         format.html { redirect_to faculty_url(@faculty), notice: "Faculty was successfully updated." }
         format.json { render :show, status: :ok, location: @faculty }
       else
@@ -69,6 +81,6 @@ class FacultiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def faculty_params
-      params.require(:faculty).permit(:dp, :name, :designation, :date_of_joining, :professional_experience, :academic_background, :areas_of_interest, :visits_abroad, :remarks)
+      params.require(:faculty).permit(:dp, :name, :email, :phone_number, :designation, :date_of_joining, :professional_experience, :academic_background, :areas_of_interest, :visits_abroad, :remarks)
     end
 end
