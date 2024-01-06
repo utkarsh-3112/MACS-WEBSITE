@@ -1,13 +1,14 @@
 require 'json'
 
 class FacultiesController < ApplicationController
+  before_action :authenticate_user!, only: [:edit, :update, :destory]
   before_action :set_faculty, only: %i[ show edit update destroy ]
 
   # GET /faculties or /faculties.json
   def index
     @faculties = Faculty.all
     @assistant_lecturers = AssistantLecturer.all
-    @research_scholars = ResearchScholar.all
+    @research_scholars = ResearchScholar.all 
     @staffs = Staff.all
     @contract_staffs = ContractStaff.all
   end

@@ -58,7 +58,9 @@
                                             <div class="gdlr-core-pbf-element">
                                                 <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"><a class="gdlr-core-button  gdlr-core-button-solid gdlr-core-button-no-border" href="#" style="font-size: 13px ;padding: 11px 24px 15px 27px;border-radius: 2px;-moz-border-radius: 2px;-webkit-border-radius: 2px;"><span class="gdlr-core-content" >Download CV</span></a></div>
                                                 <!-- TODO: Update changes later -->
-                                                <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"><%= link_to "Edit", edit_faculty_path(@faculty), class: 'gdlr-core-button  gdlr-core-button-solid gdlr-core-button-no-border', style: "font-size: 13px ;padding: 11px 24px 15px 27px;border-radius: 2px;-moz-border-radius: 2px;-webkit-border-radius: 2px;" %></div>
+                                                <% if user_signed_in? %>
+                                                    <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"><%= link_to "Edit", edit_faculty_path(@faculty), class: 'gdlr-core-button  gdlr-core-button-solid gdlr-core-button-no-border', style: "font-size: 13px ;padding: 11px 24px 15px 27px;border-radius: 2px;-moz-border-radius: 2px;-webkit-border-radius: 2px;" %></div>
+                                                <% end %>
                                             </div>
                                         </div>
                                     </div>

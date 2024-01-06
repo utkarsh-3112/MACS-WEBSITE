@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'facilities/index'
   get 'mca_courses/index'
   get 'mtech_courses/index'
