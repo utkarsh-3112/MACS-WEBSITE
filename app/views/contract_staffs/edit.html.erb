@@ -1,3 +1,4 @@
+<!--
 <h1>Editing contract staff</h1>
 
 <%= render "form", contract_staff: @contract_staff %>
@@ -8,3 +9,133 @@
   <%= link_to "Show this contract staff", @contract_staff %> |
   <%= link_to "Back to contract staffs", contract_staffs_path %>
 </div>
+-->
+
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Kingster &#8211; School, College &amp; University HTML Template</title>
+
+    <link rel='stylesheet' href='plugins/goodlayers-core/plugins/combine/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='plugins/goodlayers-core/include/css/page-builder.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='plugins/revslider/public/assets/css/settings.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/style-core.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/kingster-style-custom.css' type='text/css' media='all' />
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700%2C400" rel="stylesheet" property="stylesheet" type="text/css" media="all">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CABeeZee%3Aregular%2Citalic&amp;subset=latin%2Clatin-ext%2Cdevanagari&amp;ver=5.0.3' type='text/css' media='all' />
+
+</head>
+
+<body class="home page-template-default page page-id-2039 gdlr-core-body woocommerce-no-js tribe-no-js kingster-body kingster-body-front kingster-full  kingster-with-sticky-navigation  kingster-blockquote-style-1 gdlr-core-link-to-lightbox">
+
+<div class="gdlr-core-pbf-wrapper " style="padding: 115px 0px 40px 0px;">
+                        <div class="gdlr-core-pbf-background-wrap" style="background-color: #f3f3f3 ;"></div>
+                        <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
+                            <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+                                <div class="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first">
+                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
+                                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js " style="max-width: 760px ;">
+                                            <div class="gdlr-core-pbf-element">
+                                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" style="padding-bottom: 60px ;">
+                                                    <div class="gdlr-core-title-item-title-wrap clearfix">
+                                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 39px ;">UPDATE CONTACT STAFF</h3></div></div>
+                                            </div>
+                                            <div class="gdlr-core-pbf-element">
+                                                <div class="gdlr-core-contact-form-7-item gdlr-core-item-pdlr gdlr-core-item-pdb ">
+                                                    <div role="form" class="wpcf7" id="wpcf7-f1979-p1964-o1" lang="en-US" dir="ltr">
+                                                        <div class="screen-reader-response"></div>
+
+                                                        <%= form_with(model: @contract_staff) do |form| %>
+                                                          <div class="quform-elements">
+                                                            <div class="quform-element">
+                                                              <p><%= form.label :dp%>
+                                                                  <br>
+                                                                    <span class="wpcf7-form-control-wrap your-name">
+                                                                    <%= form.text_field :dp, class: "input1", size: "40"%>
+                                                                  </span> 
+                                                              </p>
+                                                            </div>
+
+                                                            <div class="quform-element">
+                                                              <p><%= form.label :name%>
+                                                                  <br>
+                                                                    <span class="wpcf7-form-control-wrap your-name">
+                                                                    <%= form.text_field :name, class: "input1", size: "40"%>
+                                                                  </span> 
+                                                              </p>
+                                                            </div>
+
+                                                            <div class="quform-element">
+                                                              <p><%= form.label :qualification%>
+                                                                  <br>
+                                                                    <span class="wpcf7-form-control-wrap your-name">
+                                                                    <%= form.text_field :qualification, class: "input1", size: "40"%>
+                                                                  </span> 
+                                                              </p>
+                                                            </div>
+
+                                                            <div class="quform-element">
+                                                              <p><%= form.label :designation%>
+                                                                  <br>
+                                                                    <span class="wpcf7-form-control-wrap your-name">
+                                                                    <%= form.text_field :designation, class: "input1", size: "40"%>
+                                                                  </span> 
+                                                              </p>
+                                                            </div>
+
+                                                            <!-- Begin Submit button -->
+                                                            <div style="display:flex; justify-content: space-between ">
+                                                              <div class="quform-submit">
+                                                                <div class="quform-submit-inner">
+                                                                  <%= form.submit %>
+                                                                </div>
+                                                                <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
+                                                              </div>
+                                                              <div class="quform-submit">
+                                                                        <div class="quform-submit-inner">
+                                                                            <%= link_to "Cancle", faculties_path, class: "submit-button" %>
+                                                                        </div>
+                                                                        <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
+                                                                    </div>
+                                                              </div>
+
+                                                          </div>
+                                                        <% end %>                                                            
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+<div>
+
+</div>
+
+<%= javascript_include_tag 'js/jquery/jquery.js', 'js/jquery/jquery-migrate.min.js', 'plugins/goodlayers-core/plugins/combine/script.js' %>
+    <script type='text/javascript'>
+        var gdlr_core_pbf = {
+            "admin": "",
+            "video": {
+                "width": "640",
+                "height": "360"
+            },
+            "ajax_url": "#"
+        };
+    </script>
+    <%= javascript_include_tag 'plugins/goodlayers-core/include/js/page-builder.js', 'js/jquery/ui/effect.min.js' %>
+    <script type='text/javascript'>
+        var kingster_script_core = {
+            "home_url": "index.html"
+        };
+    </script>
+    <%= javascript_include_tag 'js/plugins.min.js'%>
+</body>
+</html>
